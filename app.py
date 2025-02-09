@@ -36,9 +36,8 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 # openai.api_key = os.getenv("AIPROXY_TOKEN")
 client = OpenAI(
     api_key=os.getenv("AIPROXY_TOKEN"),  # Ensure this is set in your .env file
-    base_url="https://aiproxy.sanand.workers.dev/openai/v1"  # ✅ Correct AI Proxy URL
+    base_url=os.getenv("OPENAI_API_BASE")  # ✅ Correct AI Proxy URL
 )
-
 
 # ======================
 # Dummy Helper Functions (Replace these with actual implementations if available)
